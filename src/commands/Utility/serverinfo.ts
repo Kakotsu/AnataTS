@@ -1,9 +1,13 @@
 import { CommandInteraction, Message } from "discord.js";
 import { AnataClient } from "../../client/Client";
+import {SlashCommandBuilder} from "@discordjs/builders";
 
 export let ServerInfo = {
     name: "serverinfo",
     description: "Get info about the server.",
+    data: new SlashCommandBuilder()
+        .setName("serverinfo")
+        .setDescription("Get info about the server."),
     slashExecute(interaction: CommandInteraction, client: AnataClient) {
         let ServerInfoEmbed = client.functions.randomEmbedMessage({
             title: ':desktop: Server Info',

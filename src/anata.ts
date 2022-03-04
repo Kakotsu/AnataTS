@@ -39,4 +39,4 @@ for (const Event of Object.values(client.events)) {
     // }
 }
 
-client.login(`${process.env['TOKEN']}`)
+client.login(`${process.env['TOKEN']}`);

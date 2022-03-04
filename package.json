@@ -1,14 +1,18 @@
 {
   "name": "anatats",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An open source Discord bot with totally 100% spaghetti code. From the developers of TakumiPy, TakumiJS, and TakumiTS. ",
   "main": "./dist/anata.js",
   "scripts": {
-    "start": "tsc && node dist/anata.js"
+    "start": "tsc && node .",
+    "guild": "tsc && node ./dist/deploy.js guild",
+    "global": "tsc && node ./dist/deploy.js global"
   },
   "author": "Zemyoro",
   "license": "GPL-3.0",
   "dependencies": {
+    "@discordjs/builders": "^0.12.0",
+    "@discordjs/rest": "^0.3.0",
     "@types/lodash": "^4.14.178",
     "chalk": "4.1.2",
     "discord.js": "^13.6.0",
